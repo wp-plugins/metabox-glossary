@@ -1,0 +1,101 @@
+/*
+Plugin Name: metabox_glossary
+Plugin URI: http://zeidan.info/metabox_glossary/
+Description: Metabox Glossary filtering
+Version: 0.1.0
+Author: Eric Zeidan
+Author URI: http://zeidan.es
+License: GPL2
+ */
+
+/*  Copyright 2015 Eric Zeidan  (email : k2klettern@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License, version 2, as
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ */
+ 
+aside.mglossary_widget ul {
+	list-style: none;
+	margin: 0;
+}
+
+aside.mglossary_widget a {
+	border: 0;
+}
+
+aside.mglossary_widget li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+aside.mglossary_widget li{
+	border-top: 1px solid #eaeaea;
+	border-top: 1px solid rgba(51, 51, 51, 0.1);
+	padding: 0.7667em 0;
+}
+
+aside.mglossary_widget li:last-child {
+	padding-bottom: 0;
+}
+
+aside.mglossary_widget {
+	display:inline-table;
+}
+
+.mglossary_widget .glossary-menu-atoz {
+	height: 0px;
+}
+
+.mglossary_widget .glossary-menu-atoz .glossary-menu-item {
+	float: none;
+	border: none;
+	text-decoration: none;
+	height:30px;
+}
+
+.mglossary_widget .glossary-menu-atoz .atozmenu-off:hover {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+.mglossary_widget .glossary-menu-atoz .glossary-menu-item a {
+	display: block;
+	background-color: red;
+	padding: 2px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.mglossary_widget .glossary-menu-atoz {
+	border-bottom: none;
+	width:30px;
+}
+
+.mglossary_widget ul.atozitems-on {
+	margin-left: 50px;
+}
+
+.mglossary_widget .wpg-please-select {
+	margin-left: 50px;
+}
+.mglossary_widget .wpg-please-select p {
+	display:none;
+}
+
+.mglossary_widget .wpg-please-select:after {
+	content: 'Select a letter';
+}
