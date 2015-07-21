@@ -1,4 +1,4 @@
-=== Postpoll ===
+=== Metabox Glossary ===
 Contributors: k2klettern
 Tags: Glossary, glossary, Glosario, Wp-glossary, filter, post, post glossary, widget
 Requires at least: 4.0
