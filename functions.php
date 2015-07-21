@@ -33,7 +33,7 @@ function render_glosarios( $post, $args = array() ) {
 		$mypost = get_posts($args);
 		foreach($mypost as $post) : setup_postdata( $post );
   			$postID = $post->ID; ?>
-    		<p><input type="checkbox" name="glossary[]" class="glossary-check" id="glossary-id-<?php echo $postID;?>" value="<?php echo $postID;?>" <?php if (in_array($postID, $glossary)) echo "checked=\"checked\""; ?>><?php echo $title = get_the_title($postID); ?></p>
+    		<p><input type="checkbox" name="glossary[]" class="glossary-check" id="glossary-id-<?php echo $postID;?>" value="<?php echo $postID;?>" <?php if (is_array($glossary) && in_array($postID, $glossary)) echo "checked=\"checked\""; ?>><?php echo $title = get_the_title($postID); ?></p>
    		<?php endforeach; 
 		wp_reset_postdata();
 
