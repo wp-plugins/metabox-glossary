@@ -2,10 +2,10 @@
  
 class mglossary_widget extends WP_Widget {
  
-    function mglossary_widget(){
+    function __construct(){
         // Constructor del Widget
-        $widget_ops = array('classname' => 'mglossary_widget', 'description' => "Show Glossary Terms attached to a post" );
-        $this->WP_Widget('mglossary_widget', "Metabox Glossary Widget", $widget_ops);
+        $widget_ops = array('classname' => 'mglossary_widget', 'description' => __("Show Glossary Terms attached to a post","metaboxglossary") );
+        parent::__construct('mglossary_widget', "Metabox Glossary Widget", $widget_ops);
     }
  
     function widget($args,$instance){
@@ -65,7 +65,7 @@ class mglossary_widget extends WP_Widget {
                         <?php endforeach; 
                         ?></ul><?php
                          } else {
-                            _e('No entries Glossary');
+                            _e('No entries Glossary','metaboxglossary');
                         }
                         wp_reset_postdata();
                     }
@@ -91,7 +91,7 @@ class mglossary_widget extends WP_Widget {
                             <?php endforeach; 
                             ?></ul><?php
                              } else {
-                                _e('No entries Glossary');
+                                _e('No entries Glossary','metaboxglossary');
                             }
                             wp_reset_postdata();
                     }
@@ -114,12 +114,12 @@ class mglossary_widget extends WP_Widget {
         // Formulario de opciones del Widget, que aparece cuando añadimos el Widget a una Sidebar
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id('mglossary_pollid'); ?>"><?php _e('Titulo'); ?></label>
+            <label for="<?php echo $this->get_field_id('mglossary_pollid'); ?>"><?php _e('Titulo','metaboxglossary'); ?></label>
             <input type="text" id="<?php echo $this->get_field_id('mglossary_pollid'); ?>" name="<?php echo $this->get_field_name('mglossary_pollid'); ?>" value="<?php echo $title = $instance["mglossary_pollid"]; ?>">
         </p>
         <p>
             <input type="checkbox" id="<?php echo $this->get_field_id('mglossary_atoz'); ?>" name="<?php echo $this->get_field_name('mglossary_atoz'); ?>" value="1" <?php if (isset($instance["mglossary_atoz"]) && $instance["mglossary_atoz"] == "1") echo "checked=\"checked\""; ?>>
-            <label for="<?php echo $this->get_field_id('mglossary_atoz'); ?>"><?php _e('Show A-Z'); ?></label>
+            <label for="<?php echo $this->get_field_id('mglossary_atoz'); ?>"><?php _e('Show A-Z','metaboxglossary'); ?></label>
         </p>
         <?php
     }    

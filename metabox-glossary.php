@@ -3,7 +3,7 @@
 Plugin Name: metabox_glossary
 Plugin URI: http://zeidan.info/metabox_glossary/
 Description: Metabox Glossary filtering
-Version: 0.1.0
+Version: 0.1.1
 Author: Eric Zeidan
 Author URI: http://zeidan.es
 License: GPL2
@@ -29,7 +29,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 //requirements check
 
 if(!is_plugin_active('wp-glossary/wp-glossary.php')) {
-        echo "<div class=\"error\"> <p>This Plugin needs wp-glossary to work, pls. install it first and activate.</p></div>";
+        echo "<div class=\"error\"> <p>"._e('This Plugin needs wp-glossary to work, pls. install it first and activate.','metaboxglossary')."</p></div>";
         exit;
 }
 
