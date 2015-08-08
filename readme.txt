@@ -2,7 +2,7 @@
 Contributors: k2klettern
 Tags: Glossary, glossary, Glosario, Wp-glossary, filter, post, post glossary, widget
 Requires at least: 4.0
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 0.1.1
 License: GPLv2 or later
 
@@ -42,3 +42,8 @@ Upload the Metabox Glossary plugin to your blog, Activate it, begin to use it.
 *Release Date - 21st July, 2015*
 
 * First Release
+
+= 0.1.1 =
+*Release Date - 8 August, 2015*
+
+* Change funtions to allow work with PHP5 and WP4.3
